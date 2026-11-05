@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Udhaya Gayathri Prabhakaran | QA Engineer</title>
+<meta name="description" content="QA Engineer with experience in manual, functional and regression testing, API testing, and AI-assisted test design. Open to QA and test automation roles.">
+<meta property="og:title" content="Udhaya Gayathri Prabhakaran | QA Engineer">
+<meta property="og:description" content="Manual and automation testing, API and data validation, AI-assisted test design.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%9E%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F4F7F5;
+    --surface: #FFFFFF;
+    --ink: #16252B;
+    --muted: #4B5F66;
+    --line: #D5E0DB;
+    --accent: #0B6B63;
+    --accent-ink: #FFFFFF;
+    --flag: #8A4208;
+    --flag-bg: #FBEBD9;
+    --verify: rgba(245, 197, 66, .38);
+    --display: "Bricolage Grotesque", "Segoe UI", Helvetica, Arial, sans-serif;
+    --body: "Public Sans", "Segoe UI", Helvetica, Arial, sans-serif;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0F1A1E;
+      --surface: #162328;
+      --ink: #E6EFEC;
+      --muted: #9DB1B0;
+      --line: #27393F;
+      --accent: #4FC3B5;
+      --accent-ink: #06211E;
+      --flag: #F2B77A;
+      --flag-bg: #3A2A18;
+      --verify: rgba(245, 197, 66, .28);
+      color-scheme: dark;
+    }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:hover { text-decoration-thickness: 2px; }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+  .wrap { max-width: 62rem; margin: 0 auto; padding: 0 1.5rem; }
+
+  /* Items to double-check before publishing: search the file for "verify" */
+  .verify { background: var(--verify); border-bottom: 1px dotted var(--ink); }
+
+  /* Header */
+  .top { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.25rem 0; flex-wrap: wrap; }
+  .top .mark { font-family: var(--display); font-weight: 700; font-size: 1.1rem; text-decoration: none; color: var(--ink); }
+  .top nav { display: flex; gap: 1.5rem; }
+  .top nav a { color: var(--muted); text-decoration: none; font-weight: 500; font-size: .98rem; }
+  .top nav a:hover { color: var(--ink); text-decoration: underline; }
+
+  /* Hero */
+  .hero { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 3rem; align-items: start; padding: 3.5rem 0 4.5rem; }
+  .hero h1 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(2.5rem, 6vw, 4.25rem);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    margin: 0 0 1.25rem;
+  }
+  .hero .role { font-family: var(--display); font-weight: 500; font-size: 1.35rem; line-height: 1.35; margin: 0 0 1.25rem; color: var(--accent); }
+  .hero p { max-width: 36rem; margin: 0 0 1rem; }
+  .status { display: inline-flex; align-items: center; gap: .6rem; margin: 0 0 1.75rem; font-weight: 500; font-size: .98rem; }
+  .status::before { content: ""; width: .6rem; height: .6rem; border-radius: 50%; background: var(--accent); flex: none; }
+  .actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.75rem; }
+  .btn { display: inline-block; padding: .7rem 1.25rem; border-radius: 6px; font-weight: 600; font-size: 1rem; text-decoration: none; border: 2px solid var(--accent); }
+  .btn.primary { background: var(--accent); color: var(--accent-ink); }
+  .btn.ghost { color: var(--accent); background: transparent; }
+  .btn:hover { filter: brightness(1.08); text-decoration: none; }
+
+  /* Sample bug report: the one distinctive element */
+  .report { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 1.5rem; font-size: .97rem; }
+  .report header { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-bottom: 1rem; padding-bottom: .9rem; border-bottom: 1px solid var(--line); }
+  .report .caption { margin: 0; color: var(--muted); font-size: .9rem; }
+  .report .sev { background: var(--flag-bg); color: var(--flag); font-weight: 600; padding: .15rem .6rem; border-radius: 4px; font-size: .88rem; white-space: nowrap; }
+  .report h2 { font-family: var(--display); font-size: 1.2rem; line-height: 1.3; margin: 0 0 1rem; }
+  .report dl { margin: 0; display: grid; grid-template-columns: 6.5rem 1fr; gap: .6rem 1rem; }
+  .report dt { color: var(--muted); font-weight: 500; }
+  .report dd { margin: 0; }
+  .report ol { margin: 0; padding-left: 1.1rem; }
+
+  /* Sections */
+  section { padding: 3.5rem 0; border-top: 1px solid var(--line); }
+  section > .wrap > h2 { font-family: var(--display); font-size: clamp(1.7rem, 3.5vw, 2.25rem); letter-spacing: -0.015em; line-height: 1.15; margin: 0 0 2rem; }
+
+  /* Experience: a real sequence, so a timeline column is justified */
+  .job { display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: .5rem 2.5rem; padding-bottom: 2.25rem; }
+  .job:last-child { padding-bottom: 0; }
+  .job .when { color: var(--muted); font-weight: 500; font-size: .98rem; padding-top: .2rem; }
+  .job h3 { font-family: var(--display); font-size: 1.3rem; line-height: 1.25; margin: 0; }
+  .job .where { margin: .15rem 0 .75rem; color: var(--muted); }
+  .job ul { margin: 0; padding-left: 1.2rem; max-width: 42rem; }
+  .job li { margin-bottom: .5rem; }
+
+  /* Skills */
+  .skills { display: grid; grid-template-columns: 12rem minmax(0, 1fr); gap: 1.1rem 2.5rem; margin: 0; }
+  .skills dt { font-weight: 600; }
+  .skills dd { margin: 0; max-width: 42rem; }
+
+  /* Projects, education */
+  .entry { max-width: 42rem; }
+  .entry h3 { font-family: var(--display); font-size: 1.25rem; margin: 0 0 .25rem; }
+  .entry p { margin: 0 0 .5rem; }
+  .entry + .entry { margin-top: 1.75rem; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+
+  /* Contact */
+  .contact p { max-width: 36rem; margin: 0 0 1.25rem; }
+  footer { padding: 2rem 0 3rem; color: var(--muted); font-size: .95rem; border-top: 1px solid var(--line); }
+
+  @media (max-width: 52rem) {
+    .hero { grid-template-columns: 1fr; gap: 2.5rem; padding: 2rem 0 3rem; }
+    .job, .skills { grid-template-columns: 1fr; gap: .25rem; }
+    .skills dd { margin-bottom: .9rem; }
+    .two { grid-template-columns: 1fr; gap: 2.5rem; }
+    .report dl { grid-template-columns: 1fr; gap: .1rem; }
+    .report dd { margin-bottom: .6rem; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="top">
+    <a class="mark" href="#top">Udhaya Gayathri Prabhakaran</a>
+    <nav aria-label="Page sections">
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <main id="top">
+    <div class="hero">
+      <div>
+        <h1>Udhaya Gayathri Prabhakaran</h1>
+        <p class="role">QA Engineer for manual and automation testing, with AI-assisted test design</p>
+        <p class="status">Open to QA Engineer and test automation roles</p>
+        <p>I test software the way a user will break it: reading requirements closely, writing clear test cases, and reporting defects so developers can fix them on the first try. I worked as a QA Engineer at Infosys in Tampa, and since then I have tested web and mobile apps as a freelancer.</p>
+        <p>I care about data accuracy and about catching problems before release, and I am building my test automation skills alongside AI tools that speed up test design.</p>
+        <div class="actions">
+          <a class="btn primary" href="mailto:your.email@example.com">Email me</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/your-profile" rel="noopener">LinkedIn profile</a>
+          <a class="btn ghost" href="Udhaya-Gayathri-Prabhakaran-Resume.pdf">Download resume (PDF)</a>
+        </div>
+      </div>
+
+      <aside class="report" aria-label="Example of how I write a bug report">
+        <header>
+          <p class="caption">Example of how I write a bug report</p>
+          <span class="sev">Severity: High</span>
+        </header>
+        <h2>Discount code is dropped when the cart quantity changes</h2>
+        <dl>
+          <dt>Steps</dt>
+          <dd>
+            <ol>
+              <li>Add one item to the cart and apply a valid discount code.</li>
+              <li>Change the item quantity from 1 to 2.</li>
+              <li>Open the checkout summary.</li>
+            </ol>
+          </dd>
+          <dt>Expected</dt>
+          <dd>The discount still applies to the new total.</dd>
+          <dt>Actual</dt>
+          <dd>The code disappears and the full price is charged.</dd>
+          <dt>Evidence</dt>
+          <dd>Screen recording, browser console log, and the API response attached.</dd>
+        </dl>
+      </aside>
+    </div>
+  </main>
+
+  <section id="experience">
+    <div class="wrap" style="padding:0">
+      <h2>Experience</h2>
+
+      <article class="job">
+        <div class="when">2024 to 2026</div>
+        <div>
+          <h3>Freelance QA Engineer</h3>
+          <p class="where">Remote</p>
+          <ul>
+            <li>Tested web and mobile apps for small businesses and startups, covering functional, regression, cross-browser and usability testing. Wrote test cases and detailed bug reports with screenshots and recordings.</li>
+            <li>Validated REST APIs in Postman and automated regression checks with <span class="verify">Playwright or Selenium</span>, tracking defects in Jira.</li>
+            <li>Used AI tools (ChatGPT, Claude, Copilot) to generate test scenarios, edge cases and test data, and checked every output by hand.</li>
+            <li><span class="verify">Tested AWS-hosted apps using S3, CloudWatch logs and IAM access, and validated Segment (CDP) event tracking and data flow to downstream tools.</span></li>
+            <li><span class="verify">Tested CRM workflows in HubSpot, Salesforce or Zoho, including lead forms, contact records, field mapping and data sync.</span></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="job">
+        <div class="when">2023 to 2024</div>
+        <div>
+          <h3>Shopify Consultant (Freelance)</h3>
+          <p class="where">Remote</p>
+          <ul>
+            <li>Configured Shopify stores, including products, variants, collections, pricing, inventory, shipping and checkout, and tested end-to-end purchase flows before launch.</li>
+            <li>Kept product data accurate across bulk uploads using spreadsheets, and designed product images and store content in Canva.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="job">
+        <div class="when">2021 to 2022</div>
+        <div>
+          <h3>Junior Data Analyst</h3>
+          <p class="where"><span class="verify">[Company name], [City or Remote]</span></p>
+          <ul>
+            <li><span class="verify">Built and maintained Power BI dashboards and reports for [business team], turning raw data into clear metrics for decision-making.</span></li>
+            <li><span class="verify">Cleaned and validated data from Excel and SQL sources, checking accuracy and consistency before reporting.</span></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="job">
+        <div class="when">May 2017 to Dec 2017</div>
+        <div>
+          <h3>QA Engineer</h3>
+          <p class="where">Infosys, Tampa, FL</p>
+          <ul>
+            <li>Designed and executed manual test cases for <span class="verify">[application or client domain]</span>, covering functional, regression and smoke testing across release cycles in an Agile team.</li>
+            <li>Logged, triaged and tracked defects in <span class="verify">Jira or HP ALM</span>, retested fixes, and <span class="verify">validated backend data with SQL</span>.</li>
+            <li>Supported user acceptance testing and worked with developers, business analysts and onshore and offshore teams to clarify requirements and resolve issues.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap" style="padding:0">
+      <h2>Skills</h2>
+      <dl class="skills">
+        <dt>Testing</dt>
+        <dd>Manual, functional, regression, smoke and exploratory testing; test case design; UAT support; defect lifecycle; SDLC and STLC; Agile and Scrum.</dd>
+        <dt>Automation, API and data</dt>
+        <dd><span class="verify">Selenium or Playwright</span>, Postman, REST API testing, <span class="verify">SQL data validation</span>, Git, CI/CD awareness.</dd>
+        <dt>AI-assisted testing</dt>
+        <dd>Prompt engineering for test cases and test data with ChatGPT, Claude and Copilot; evaluating AI output for accuracy, consistency and hallucinations.</dd>
+        <dt>Cloud and platforms</dt>
+        <dd><span class="verify">AWS (S3, EC2, Lambda, CloudWatch, IAM, RDS basics), Segment (CDP), and CRM platforms such as HubSpot, Salesforce or Zoho.</span></dd>
+        <dt>Tools</dt>
+        <dd>Jira, TestRail, Confluence, browser DevTools, Power BI, Excel and Google Sheets, Shopify, Canva.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap" style="padding:0">
+      <div class="two">
+        <div>
+          <h2>Projects</h2>
+          <div class="entry">
+            <h3>Test automation practice project</h3>
+            <p>An automated regression suite for a public demo web app, using <span class="verify">Playwright or Selenium</span> and Postman API tests.</p>
+            <p><a href="https://github.com/your-username/your-repo" rel="noopener">View the code on GitHub</a></p>
+          </div>
+        </div>
+        <div>
+          <h2>Education</h2>
+          <div class="entry">
+            <h3><span class="verify">[Degree, field of study]</span></h3>
+            <p><span class="verify">[University name], [City, Country], [Year]</span></p>
+          </div>
+          <div class="entry">
+            <h3>Learning</h3>
+            <p><span class="verify">ISTQB Certified Tester Foundation Level (in progress)</span></p>
+            <p><span class="verify">[Test automation or AI course name], [Year]</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap" style="padding:0">
+      <h2>Contact</h2>
+      <p>I am looking for a QA or test automation role where I can take ownership of quality and keep growing. The quickest way to reach me is email.</p>
+      <div class="actions" style="margin-top:0">
+        <a class="btn primary" href="mailto:your.email@example.com">your.email@example.com</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/your-profile" rel="noopener">LinkedIn</a>
+        <a class="btn ghost" href="https://github.com/your-username" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap" style="padding:0">© 2026 Udhaya Gayathri Prabhakaran</div>
+  </footer>
+</div>
+
+</body>
+</html>
